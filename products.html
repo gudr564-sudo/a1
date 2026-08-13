@@ -12,15 +12,14 @@
 
     gtag('config', 'G-0LY0HY7L01');
   </script>
-  <title>Disclaimer — AURÉA</title>
-  <meta name="description" content="Disclaimer for the ELAN demo store: fictional products, illustrative stock photography.">
-  <meta name="robots" content="noindex">
+  <title>Shop All — AURÉA</title>
+  <meta name="description" content="Browse the full AURÉA collection: rings, necklaces, earrings, bracelets and watches.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Cormorant:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body data-page="legal">
+<body data-page="products">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
@@ -31,7 +30,7 @@
       <a class="brand" href="index.html">AURÉA<span>.</span></a>
       <nav class="main-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="products.html">Shop All</a>
+        <a href="products.html" aria-current="page">Shop All</a>
         <a href="products.html?cat=rings">Rings</a>
         <a href="products.html?cat=necklaces">Necklaces</a>
         <a href="products.html?cat=bridal">Bridal</a>
@@ -54,31 +53,38 @@
       </button>
     </div>
     <a href="index.html">Home</a>
-    <a href="products.html">Shop All</a>
+    <a href="products.html" aria-current="page">Shop All</a>
+    <a href="products.html?cat=rings">Rings</a>
+    <a href="products.html?cat=necklaces">Necklaces</a>
+    <a href="products.html?cat=earrings">Earrings</a>
+    <a href="products.html?cat=bracelets">Bracelets</a>
+    <a href="products.html?cat=watches">Watches</a>
+    <a href="products.html?cat=bridal">Bridal</a>
     <a href="cart.html">Shopping Bag</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <a href="disclaimer.html">Disclaimer</a>
   </nav>
 
-  <main id="main" class="container legal">
+  <main id="main" class="container">
     <div class="page-head">
-      <p class="section-kicker">Legal</p>
-      <h1>Disclaimer</h1>
-      <p class="updated">Last updated: July 8, 2026</p>
+      <p class="section-kicker">The collection</p>
+      <h1>Shop all</h1>
+      <p>Every piece, one place. Filter by type or sort to find the one that stays with you.</p>
     </div>
-    <h2>1. General disclaimer</h2>
-    <p>All content on AURÉA is provided for design demonstration and informational purposes only. Nothing on this site constitutes a real offer to sell goods.</p>
-    <h2>2. Fictional products and pricing</h2>
-    <p>Product names, descriptions, prices, discounts, ratings, and review counts are fictional and for illustration only. They do not describe real merchandise.</p>
-    <h2>3. Photography</h2>
-    <p>Images are free stock photographs from Unsplash used for illustrative purposes. They depict representative jewellery and watch pieces, not the exact fictional products described.</p>
-    <h2>4. External links</h2>
-    <p>Links to third-party sites (such as Unsplash or Google Fonts) are provided for reference. We are not responsible for the content or practices of external sites.</p>
-    <h2>5. No professional advice</h2>
-    <p>Nothing on this site should be taken as professional, legal, or purchasing advice.</p>
-    <h2>6. Contact</h2>
-    <p>Questions about this disclaimer can be sent to <a href="mailto:info@learnvista.cc">info@learnvista.cc</a>.</p>
+
+    <div class="toolbar">
+      <div class="chip-row" data-chips role="group" aria-label="Filter by category"></div>
+      <div class="sort-wrap">
+        <label for="sort">Sort</label>
+        <select id="sort" data-sort>
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="rating">Top rated</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="result-count" data-count aria-live="polite"></p>
+    <div class="product-grid" data-grid></div>
   </main>
 
   <footer class="site-footer">
